@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading{
+    text-align: center;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.head-1 span{
+    color: rgb(255, 115, 0);
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+ul li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+ul li p{
+    color: rgb(255, 115, 0);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+ul li .icon{
+    font-size: 35px;
+    margin: 0 60px;
+    color: rgb(255, 115, 0);
+
+}
+ul li .progress{
+    margin: 12px 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(20, 12, 2, 0.315);
+    display: grid;
+    place-content: center;
+    position: relative;
+}
+.progress::after{
+    content: "";
+    position: absolute;
+    width: 125px;
+    height: 5px;
+    background-color: rgba(20, 12, 2, 0.315);
+    top: 13px;
+    right: 30px;
+}
+ul li .progress .uil{
+    display: none;
+}
+.one::after{
+    width: 0;
+    height: 0;
+}
+ ul li .active{
+    background-color: rgb(255, 115, 0);
+}
+
+li .active::after{
+    background-color: rgb(255, 115, 0);
+}
+ul li .active p{
+    display: none;
+    
+}
+ul li .active .uil{
+    display:block;
+    color: white;
+}
+
+@media (max-width: 840px) {
+    ul{
+        flex-direction: column;
+        place-content: center;
+        /* margin-top: 0px; */
+    }
+    ul li{
+        flex-direction: row;
+        margin: 20px 0;
+        
+    }
+    .progress::after{
+        width: 5px;
+        height: 64px;
+        left: 15px;
+        top: -64px;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+    .one::after{
+        width: 0;
+        height: 0;
+    }
+}
+
+.number{
+    color: white;
+    font-weight: 600;
+}
