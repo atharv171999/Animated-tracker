@@ -95,6 +95,7 @@ ul li .active .uil{
     ul li{
         flex-direction: row;
         margin: 20px 0;
+        cursor: pointer;
         
     }
     .progress::after{

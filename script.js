@@ -1,41 +1,36 @@
-const one = document.querySelector(".one")
-const two = document.querySelector(".two")
-const three = document.querySelector(".three")
-const four = document.querySelector(".four")
-const five = document.querySelector(".five")
-
- one.onclick = function(){
-    one.classList.add("active")
-    two.classList.remove("active")
-    three.classList.remove("active")
-    four.classList.remove("active")
-    five.classList.remove("active")
- }
- two.onclick = function(){
-    one.classList.add("active")
-    two.classList.add("active")
-    three.classList.remove("active")
-    four.classList.remove("active")
-    five.classList.remove("active")
- }
- three.onclick = function(){
-    one.classList.add("active")
-    two.classList.add("active")
-    three.classList.add("active")
-    four.classList.remove("active")
-    five.classList.remove("active")
- }
- four.onclick = function(){
-    one.classList.add("active")
-    two.classList.add("active")
-    three.classList.add("active")
-    four.classList.add("active")
-    five.classList.remove("active")
- }
- five.onclick = function(){
-    one.classList.add("active")
-    two.classList.add("active")
-    three.classList.add("active")
-    four.classList.add("active")
-    five.classList.add("active")
- }
+const selectAll = document.querySelectorAll(".progress")
+selectAll[0].addEventListener("click", function(){
+        selectAll[0].classList.add("active")
+    selectAll[1].classList.remove("active")
+    selectAll[2].classList.remove("active")
+    selectAll[3].classList.remove("active")
+    selectAll[4].classList.remove("active")
+})
+selectAll[1].addEventListener("click", function(){
+    selectAll[0].classList.add("active")
+selectAll[1].classList.add("active")
+selectAll[2].classList.remove("active")
+selectAll[3].classList.remove("active")
+selectAll[4].classList.remove("active")
+})
+selectAll[2].addEventListener("click", function(){
+    selectAll[0].classList.add("active")
+selectAll[1].classList.add("active")
+selectAll[2].classList.add("active")
+selectAll[3].classList.remove("active")
+selectAll[4].classList.remove("active")
+})
+selectAll[3].addEventListener("click", function(){
+    selectAll[0].classList.add("active")
+selectAll[1].classList.add("active")
+selectAll[2].classList.add("active")
+selectAll[3].classList.add("active")
+selectAll[4].classList.remove("active")
+})
+selectAll[4].addEventListener("click", function(){
+    selectAll[0].classList.add("active")
+selectAll[1].classList.add("active")
+selectAll[2].classList.add("active")
+selectAll[3].classList.add("active")
+selectAll[4].classList.add("active")
+})
